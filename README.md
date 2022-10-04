@@ -51,9 +51,8 @@ Note: Creating an Autostart of the main.py script to keep the stream running on 
 sudo python3 /home/pi/pi-camera-stream-flask/main.py
 ```
 
-## Step 3 – Autostart your Pi Stream
+## Step 3 – Autostart Pi Stream
 
-Optional: A good idea is to make the the camera stream auto start at bootup of your pi. You will now not need to re-run the script every time you want to create the stream. You can do this by going editing the /etc/profile to:
 
 ```
 sudo nano /etc/profile
