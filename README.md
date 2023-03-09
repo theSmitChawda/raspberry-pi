@@ -1,21 +1,8 @@
 # Make you own Raspberry Pi Camera Stream
 
-Create your own live stream from a Raspberry Pi using the Pi camera module. Build your own applications from here.
+Created a custom live stream from a Raspberry Pi using the Pi camera module.
 
-## How it works
-The Pi streams the output of the camera module over the web via Flask. Devices connected to the same network would be able to access the camera stream via
-
-```
-<raspberry_pi_ip:5000>
-```
-
-## Screenshots
-| ![Setup](readme/pi-stream-client.jpg) | ![Live Pi Camera Stream](readme/pi-stream-screen-capture.jpg) |
-| ------------------------------------- | ------------------------------------------------------------- |
-| Pi Setup                              | Pi - Live Stream                                              |
-
-## Library dependencies
-Install the following dependencies to create camera stream.
+## Dependencies
 
 ```
 sudo apt-get update
@@ -35,8 +22,7 @@ sudo pip3 install opencv-python
 
 ```
 
-
-## Step 1 – Cloning Raspberry Pi Camera Stream
+## Clone the project
 Open up terminal and clone the Camera Stream repo:
 
 ```
@@ -44,15 +30,14 @@ cd /home/pi
 git clone https://github.com/vishwshah/desktop-tutorial.git
 ```
 
-## Step 2 – Launch Web Stream
+## Launch Stream
 
 Note: Creating an Autostart of the main.py script to keep the stream running on bootup.
 ```bash cd modules
 sudo python3 /home/pi/pi-camera-stream-flask/main.py
 ```
 
-## Step 3 – Autostart Pi Stream
-
+## Autostart Pi Stream
 
 ```
 sudo nano /etc/profile
@@ -63,6 +48,3 @@ Go the end of the and add the following (from above):
 ```
 sudo python3 /home/pi/pi-camera-stream-flask/main.py
 ```
-
-This would cause the following terminal command to auto-start each time the Raspberry Pi boots up. This in effect creates a headless setup - which would be accessed via SSH.
-
